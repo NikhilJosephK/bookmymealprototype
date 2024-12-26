@@ -12,13 +12,16 @@ export default function LoginForm() {
     };
 
     try {
-      const response = await fetch(`http://localhost:3001/api/employee-login`, {
-        method: "POST",
-        header: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userLoginData),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_SITE_DOMAIN}/api/employee-login`,
+        {
+          method: "POST",
+          header: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userLoginData),
+        }
+      );
       const data = await response.json();
 
       if (!data) {

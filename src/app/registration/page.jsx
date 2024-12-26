@@ -15,13 +15,16 @@ export default function Login() {
       password: e.target.children[2].value || "",
     };
     try {
-      const response = await fetch(`http://localhost:3001/api/registration`, {
-        method: "POST",
-        header: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(registrationDetails),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_SITE_DOMAIN}/api/registration`,
+        {
+          method: "POST",
+          header: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(registrationDetails),
+        }
+      );
       const data = await response.json();
       console.log(data);
       const { error } = data;

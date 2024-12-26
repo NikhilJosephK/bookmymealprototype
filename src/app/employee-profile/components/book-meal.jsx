@@ -22,13 +22,16 @@ export default function BookMeal() {
       username: cookieData,
     };
     try {
-      const response = await fetch(`http://localhost:3001/api/book-meal`, {
-        method: "POST",
-        header: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userMeal),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_SITE_DOMAIN}/api/book-meal`,
+        {
+          method: "POST",
+          header: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userMeal),
+        }
+      );
 
       const data = await response.json();
 

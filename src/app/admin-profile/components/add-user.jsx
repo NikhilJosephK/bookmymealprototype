@@ -12,13 +12,16 @@ export default function AddUser() {
       companyName: companyName,
     };
     try {
-      const response = await fetch(`http://localhost:3001/api/add-user`, {
-        method: "POST",
-        header: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_SITE_DOMAIN}/api/add-user`,
+        {
+          method: "POST",
+          header: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
 
       const data = await response.json();
 
