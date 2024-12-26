@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@prisma/client": "^6.0.1",
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-day-picker": "^9.4.4",
