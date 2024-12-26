@@ -1,4 +1,4 @@
-// pages/api/registration.js
+
 import cors from 'cors'
 
 const corsMiddleware = cors({
