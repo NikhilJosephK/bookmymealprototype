@@ -1,0 +1,1 @@
+export { default as GetCookie } from './get-cookie';
