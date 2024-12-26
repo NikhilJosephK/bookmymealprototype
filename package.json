@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postinstall": "prisma generate --schema=./prsima-folder/prisma/schema.prisma"
+    "postinstall": "prisma generate --schema=./prisma-folder/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^6.0.1",
